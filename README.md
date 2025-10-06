@@ -1,18 +1,14 @@
 # Macro Calculator (Mifflin–St Jeor)
 
-Static, client‑side macro calculator.
+Hybrid macro calculator with an Advanced manual mode. Computes **only** when **Calculate** is pressed. Fast, client‑side, and GitHub Pages ready.
 
-## Files
-- `index.html` – markup
-- `style.css` – styling
-- `app.js` – logic + console tests
+## Features
+- Mifflin–St Jeor → BMR → TDEE → Target kcal (± lbs/week × 3500 ÷ 7)
+- **Hybrid** macros: Protein = max(g/kg, % floor); Fat = %; Carbs = remainder
+- **Manual** mode: set P/F/C %, must total 100% (auto-balance to carbs optional)
+- Advanced panel hidden until toggled; accessible disclosure widget
+- Local save (`macroCalc.v4`), copy results (includes active macro mode)
+- Compute happens only on **Calculate**; inputs set a dirty flag
 
-## Deploy on GitHub Pages
-1. New repo → add these three files.
-2. Settings → Pages → **Deploy from a branch** → `main` → root (`/`).
-3. Open the Pages URL once the build finishes.
-
-## Notes
-- Auto protein: 2.2 g/kg on cuts, 1.8 g/kg on gains (override via slider).
-- Target Calories = TDEE ± (lbs/week × 3500 ÷ 7).
-- All calculations run locally in the browser.
+## Deploy
+Push files to a repo → Settings → Pages → Deploy from a branch → `main` → root.
